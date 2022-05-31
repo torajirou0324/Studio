@@ -4,23 +4,19 @@
 
 class PlayScene
 {
-	struct BackGround
+	struct Object
 	{
-		int BackGroundImg;
-		int x;
-		int y;
-		int num;
+		int Img;
+		float x;
+		float y;
 	};
 
-	struct Player
-	{
-		int playerImg;
-		int x;
-		int y;
-	};
-
-	std::vector<BackGround> backImg;
-	Player player;
+	std::vector<Object> backImg;
+	Object player;
+	std::vector< Object> bullet;
+	bool m_jampFlag;
+	float m_velocity;
+	float m_mileage;
 public:
 	PlayScene();
 	~PlayScene();
